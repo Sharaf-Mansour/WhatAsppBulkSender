@@ -1,7 +1,8 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
+﻿global using OpenQA.Selenium;
+global using OpenQA.Selenium.Support.UI;
+global using Fn = System.Func<OpenQA.Selenium.IWebDriver, bool>;
 namespace WhatsAppBulkSender;
-public class ExitException : Exception { }
+public class ExitException : Exception;
 internal static class Ext
 {
     public static bool Handle(this Fn Fun, IWebDriver driver)
